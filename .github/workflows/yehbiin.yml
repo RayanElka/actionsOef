@@ -13,4 +13,8 @@ jobs:
       - name: Update diagram
         uses: githubocto/repo-visualizer@0.7.1
         with:
-          output_file: "images/diagram.svg"
+          output_file: "diagram.svg"
+          should_push: false
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+            path: "diagram.svg"
